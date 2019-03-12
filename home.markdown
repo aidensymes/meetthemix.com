@@ -2,7 +2,6 @@
 title: Home
 date: 2019-03-12 14:27:00 Z
 permalink: "/"
-layout: home
 sections:
 - title: You're gonna like this **mix**. A lot.
   video: <iframe width="560" height="315" src="https://www.youtube.com/embed/pWmq3fEkHSo"
@@ -30,6 +29,12 @@ sections:
   - More about G. H. Cretors, https://www.ghcretors.com/
   - Find a store near you, https://www.ghcretors.com/where-to-buy
   - Buy now on Amazon, https://www.amazon.com/stores/page/C842DF10-2B97-477F-8680-5086D60095D2
+footer:
+  facebook: https://www.facebook.com/GHCretors
+  twitter: https://twitter.com/GHCretors
+  youtube: https://www.youtube.com/user/GHCretors
+  instagram: https://www.instagram.com/ghcretors/
+layout: home
 ---
 
-Foo
+
