@@ -1,0 +1,24 @@
+// Colors
+////////////////////////////////////////////////////////////////////////////////
+$black: #000000;
+$blue: #4F91CD;
+$orange: #FF8400;
+$yellow: #FFCB02;
+$white: #FFFFFF;
+
+// Units
+////////////////////////////////////////////////////////////////////////////////
+$gutter: 30px;
+$gutter-half: $gutter / 2;
+$gutter-2: $gutter*2;
+$gutter-3: $gutter*2;
+$gutter-4: $gutter*4;
+$gutter-6: $gutter*6;
+
+// columns
+////////////////////////////////////////////////////////////////////////////////
+$columns: 12;
+
+@function col($cols) {
+    @return calc(((99% - ((#{$columns} - 1) * #{$gutter})) / #{$columns}) * #{$cols} + ((#{$cols} - 1) * #{$gutter}));
+}

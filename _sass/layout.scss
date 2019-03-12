@@ -1,0 +1,40 @@
+@import "variables";
+
+// Wrappers
+////////////////////////////////////////////////////////////////////////////////
+.wrapper--outer {
+  width: 100%;
+  background-color: $black;
+  // Clearfix
+  zoom: 1;
+  &:after {
+    content:" ";
+    display: block;
+    clear: both;
+  }
+}
+
+.wrapper {
+  width: 90%;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: block;
+  // Clearfix
+  zoom: 1;
+  &:after {
+    content:" ";
+    display: block;
+    clear: both;
+  }
+}
+
+// columns
+////////////////////////////////////////////////////////////////////////////////
+$i: 1;
+@for $i from 1 through $columns {
+  .col--#{$i} {
+    width: col($i);
+    display: inline-block;
+    vertical-align: top;
+  }
+}

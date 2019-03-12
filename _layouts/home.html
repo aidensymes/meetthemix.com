@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+  <body>
+      <div class="wrapper">
+        {% for section in page.sections %}
+          <section id="{{ section.title }}" class="col--12">
+            <h1 class="col--8">
+             {{ section.title | markdownify | replace: '<p>', '' }}
+            </h1>
+            {% if section.video %}
+              <div class="col--12">
+                {{ section.video }}
+              </div>
+            {% endif %}
+            {% if section.caption %}
+              <div class="col--4">
+                {{ section.caption }}
+              </div>
+            {% endif %}
+            {% if section.links %}
+                {% for link in section.links %}
+                  <div class="col--4">
+                    {{ link }}
+                  </div>
+                {% endfor %}
+            {% endif %}
+          </section>
+        {% endfor %}
+      </div>
+      {% include footer.html %}
+  </body>
+</html>
