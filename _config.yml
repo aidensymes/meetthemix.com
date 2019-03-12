@@ -1,7 +1,6 @@
 ---
 title: Meet The Mix
 timezone: UTC
-tagline:
 collections:
   posts:
     title: Posts
@@ -9,3 +8,4 @@ collections:
   uploads:
     title: Uploads
     output: true
+tagline: 
