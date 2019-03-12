@@ -1,3 +1,2 @@
-## meetthemix.com
-G. H. Cretors x
-Sir Mix-A-Lot
+# meetthemix.com
+G. H. Cretors x Sir Mix-A-Lot
