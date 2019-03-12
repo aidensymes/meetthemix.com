@@ -24,7 +24,7 @@ meet-the-mix:
   caption: Foo
   images:
   - 
-Links:
+links:
   title: Hungry for more?
   images:
   - 
