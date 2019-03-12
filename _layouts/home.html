@@ -3,27 +3,49 @@
   {% include head.html %}
   <body>
       <div class="wrapper">
+        {% include header.html %}
         {% for section in page.sections %}
           <section id="{{ section.title }}" class="col--12">
-            <h1 class="col--8">
-             {{ section.title | markdownify | replace: '<p>', '' }}
-            </h1>
-            {% if section.video %}
-              <div class="col--12">
-                {{ section.video }}
-              </div>
-            {% endif %}
-            {% if section.caption %}
-              <div class="col--4">
-                {{ section.caption }}
-              </div>
-            {% endif %}
-            {% if section.links %}
+            <div class="col--8">
+              <h1>
+                {{ section.title | markdownify | replace: '<p>', '' }}
+              </h1>
+              {% if section.links %}
+                <div class="links__link button col--6">
+                  Remix the page
+                </div>
                 {% for link in section.links %}
-                  <div class="col--4">
-                    {{ link }}
+                  {% assign link-array = link | split: ", " %}
+                  <div class="links__link col--6 overline">
+                    <a href="{{ link-array[1] }}" target="_blank">
+                      {{ link-array[0] }}
+                    </a>
                   </div>
                 {% endfor %}
+              {% endif %}
+            </div>
+            {% if section.video %}
+              {% if forloop.first == true %}
+                <div class="col--12">
+              {% else %}
+                <div class="col--8">
+              {% endif %}
+                <div class="wrapper--video">
+                  {{ section.video }}
+                </div>
+                {% if section.caption %}
+                  <div class="col--4">
+                    {{ section.caption }}
+                  </div>
+                {% endif %}
+              </div>
+            {% endif %}
+            {% if section.images %}
+              <div class="col--4">
+                {% for image in section.images %}
+                  <img src="{{ image }}"></img>
+                {% endfor %}
+              </div>
             {% endif %}
           </section>
         {% endfor %}

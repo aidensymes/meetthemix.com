@@ -2,18 +2,6 @@
 
 // Wrappers
 ////////////////////////////////////////////////////////////////////////////////
-.wrapper--outer {
-  width: 100%;
-  background-color: $black;
-  // Clearfix
-  zoom: 1;
-  &:after {
-    content:" ";
-    display: block;
-    clear: both;
-  }
-}
-
 .wrapper {
   width: 90%;
   max-width: 1440px;
@@ -28,13 +16,66 @@
   }
 }
 
-// columns
-////////////////////////////////////////////////////////////////////////////////
-$i: 1;
-@for $i from 1 through $columns {
-  .col--#{$i} {
-    width: col($i);
-    display: inline-block;
-    vertical-align: top;
+.wrapper--outer {
+  width: 100%;
+  background-color: $black;
+  // Clearfix
+  zoom: 1;
+  &:after {
+    content:" ";
+    display: block;
+    clear: both;
   }
+}
+
+.wrapper--video{
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+  margin-bottom: $gutter;
+  iframe{
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
+}
+
+section {
+  margin-bottom: $gutter-8;
+}
+
+// Header
+////////////////////////////////////////////////////////////////////////////////
+
+header {
+  margin-bottom: $gutter-3;
+}
+
+.header__title {
+  margin-top: $gutter-3;
+}
+
+// Links
+////////////////////////////////////////////////////////////////////////////////
+
+.button {
+  background-color: $black;
+  height: $gutter-2;
+  line-height: $gutter-2;
+  border-radius: 500px;
+  color: $yellow;
+  text-align: center;
+  &:hover {
+    background-color: $yellow;
+    color: $black;
+    border: 2px solid $black;
+    cursor: pointer;
+  }
+}
+
+.links__link {
+  margin-bottom: $gutter-2;
 }

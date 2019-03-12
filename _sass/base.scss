@@ -13,9 +13,57 @@ body {
   background-color: $yellow;
 }
 
-// ::selection {
-//   background: yellow; /* WebKit/Blink Browsers */
-// }
-// ::-moz-selection {
-//   background: yellow; /* Gecko Browsers */
-// }
+img {
+  width: 100%;
+  height: auto;
+  margin-top: $gutter;
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+// Styling
+////////////////////////////////////////////////////////////////////////////////
+.overline {
+  padding-top: $gutter;
+  border-top: 2px solid $black;
+}
+
+::selection {
+  background: $white; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: $white; /* Gecko Browsers */
+}
+
+
+// columns
+////////////////////////////////////////////////////////////////////////////////
+$i: 1;
+@for $i from 1 through $columns {
+  .col--#{$i} {
+    width: col($i);
+    display: inline-block;
+    vertical-align: top;
+    margin-right: $gutter;
+  }
+}
+
+.col--12,
+.col--1  + .col--11,
+.col--2  + .col--10,
+.col--3  + .col--9,
+.col--4  + .col--8,
+.col--5  + .col--7,
+.col--7  + .col--5,
+.col--8  + .col--4,
+.col--9  + .col--3,
+.col--10 + .col--2,
+.col--11 + .col--1,
+.col--1:nth-child(12),
+.col--2:nth-child(6),
+.col--3:nth-child(4),
+.col--4:nth-child(3),
+.col--6:nth-child(odd) {
+  margin-right: 0;
+}
