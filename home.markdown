@@ -21,10 +21,13 @@ meet-the-mix:
   video: <iframe width="560" height="315" src="https://www.youtube.com/embed/RDTre8s3AH0"
     frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
     allowfullscreen></iframe>
-  caption: 
-  images: 
+  caption: Foo
+  images:
+  - 
 Links:
   title: Hungry for more?
+  images:
+  - 
   More about G.H. Cretors: https://www.ghcretors.com/
   Find a store near you: https://www.ghcretors.com/where-to-buy
   Buy now on Amazon: https://www.amazon.com/stores/page/C842DF10-2B97-477F-8680-5086D60095D2
