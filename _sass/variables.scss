@@ -18,9 +18,10 @@ $gutter-6: $gutter*6;
 // Columns
 ////////////////////////////////////////////////////////////////////////////////
 $columns: 12;
+$col-width: calc((100% - ((#{$columns} - 1) * #{$gutter})) / #{$columns});
 
 @function col($cols) {
-    @return calc(((99% - ((#{$columns} - 1) * #{$gutter})) / #{$columns}) * #{$cols} + ((#{$cols} - 1) * #{$gutter}));
+    @return calc(#{$col-width} * #{$cols} + ((#{$cols} - 1) * #{$gutter}) - 3px);
 }
 
 // Breakpoints

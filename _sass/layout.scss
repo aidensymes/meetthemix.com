@@ -82,7 +82,7 @@
 
 section {
   margin-bottom: $gutter-6;
-  @include break-at('small') {
+  @include break-at('medium') {
     margin-bottom: $gutter-4;
   }
 }
@@ -128,19 +128,19 @@ header {
   line-height: $gutter-2;
   border-radius: 500px;
   text-align: center;
+  border: 2px solid $black;
   &:hover {
-    background-color: $yellow;
-    border: 2px solid $black;
+    background-color: inherit;
     cursor: pointer;
     h2 {
-      color: $black;
+      color: $black !important;
     }
   }
 }
 
 .links__link {
   margin-bottom: $gutter-2;
-  @include break-at('small') {
+  @include break-at('medium') {
     margin-bottom: $gutter;
   }
 }
@@ -157,7 +157,7 @@ footer {
 }
 
 .footer__social {
-  color: $yellow;
+  color: $blue;
   display: inline-flex;
   div {
     flex: auto;
@@ -165,10 +165,19 @@ footer {
     text-align: center;
     i {
       font-size: 36px;
+      @include break-at('medium') {
+        font-size: 25px;
+      }
     }
   }
 }
 
+#footer__caption {
+  @include break-at('small') {
+    display: none;
+  }
+}
+
 .footer__logo {
-  fill: $yellow;
+  fill: $blue;
 }

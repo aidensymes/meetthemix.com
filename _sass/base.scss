@@ -10,7 +10,7 @@ html,
 body {
   width: 100%;
   height: 100%;
-  background-color: $yellow;
+  background-color: $blue;
 }
 
 img {
@@ -37,7 +37,7 @@ img {
 
 .rule--light {
   padding-top: $gutter;
-  border-top: 2px solid $yellow;
+  border-top: 2px solid $blue;
   @include break-at('small') {
     padding-top: $gutter-half;
   }
