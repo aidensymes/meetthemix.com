@@ -3,21 +3,18 @@ title: Home
 date: 2019-03-12 14:27:00 Z
 permalink: "/"
 song: <iframe width="100%" height="180" scrolling="no" frameborder="no" allow="autoplay"
-  src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/585373488&color=%23000000&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false"></iframe>
+  src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/585373488&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=true"></iframe>
 sections:
 - title: You're gonna like this **mix**. A lot.
   video: <iframe width="560" height="315" src="https://www.youtube.com/embed/pWmq3fEkHSo"
     frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
     allowfullscreen></iframe>
-  caption: Fusce sollicitudin nulla ac lorem laoreet maximus. Donec rhoncus eget arcu
-    id congue. Vestibulum vitae scelerisque ex, vel pharetra ante. Nullam vulputate
-    scelerisque lectus, eget ultrices magna porttitor non.
+  caption: Foo
 - title: The making of **the mix**.
   video: <iframe width="560" height="315" src="https://www.youtube.com/embed/KRKwiodn9N0"
     frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
     allowfullscreen></iframe>
-  caption: Fusce pellentesque tincidunt libero vitae aliquet. Donec condimentum nisi
-    et purus bibendum vehicula. Nam mollis eleifend tristique.
+  caption: Foo
   images:
   - "/uploads/IMG_2697.jpg"
   - "/uploads/IMG_2402.jpg"
@@ -25,8 +22,7 @@ sections:
   video: <iframe width="560" height="315" src="https://www.youtube.com/embed/RDTre8s3AH0"
     frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
     allowfullscreen></iframe>
-  caption: Fusce pellentesque tincidunt libero vitae aliquet. Donec condimentum nisi
-    et purus bibendum vehicula. Nam mollis eleifend tristique.
+  caption: Foo
   images:
   - "/uploads/2FCB75B4-42DA-49AB-B143-428461E4A570.JPG"
 - title: Hungry for more?
@@ -43,4 +39,5 @@ footer:
   instagram: https://www.instagram.com/ghcretors/
 layout: home
 ---
+
 
