@@ -9,12 +9,15 @@ sections:
   video: <iframe width="560" height="315" src="https://www.youtube.com/embed/pWmq3fEkHSo"
     frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
     allowfullscreen></iframe>
-  caption: Fusce sollicitudin nulla ac lorem laoreet maximus. Donec rhoncus eget arcu id congue. Vestibulum vitae scelerisque ex, vel pharetra ante. Nullam vulputate scelerisque lectus, eget ultrices magna porttitor non.
+  caption: Fusce sollicitudin nulla ac lorem laoreet maximus. Donec rhoncus eget arcu
+    id congue. Vestibulum vitae scelerisque ex, vel pharetra ante. Nullam vulputate
+    scelerisque lectus, eget ultrices magna porttitor non.
 - title: The making of **the mix**.
   video: <iframe width="560" height="315" src="https://www.youtube.com/embed/KRKwiodn9N0"
     frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
     allowfullscreen></iframe>
-  caption: Fusce pellentesque tincidunt libero vitae aliquet. Donec condimentum nisi et purus bibendum vehicula. Nam mollis eleifend tristique.
+  caption: Fusce pellentesque tincidunt libero vitae aliquet. Donec condimentum nisi
+    et purus bibendum vehicula. Nam mollis eleifend tristique.
   images:
   - "/uploads/IMG_2697.jpg"
   - "/uploads/IMG_2402.jpg"
@@ -22,7 +25,8 @@ sections:
   video: <iframe width="560" height="315" src="https://www.youtube.com/embed/RDTre8s3AH0"
     frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
     allowfullscreen></iframe>
-  caption: Fusce pellentesque tincidunt libero vitae aliquet. Donec condimentum nisi et purus bibendum vehicula. Nam mollis eleifend tristique.
+  caption: Fusce pellentesque tincidunt libero vitae aliquet. Donec condimentum nisi
+    et purus bibendum vehicula. Nam mollis eleifend tristique.
   images:
   - "/uploads/2FCB75B4-42DA-49AB-B143-428461E4A570.JPG"
 - title: Hungry for more?
@@ -39,3 +43,4 @@ footer:
   instagram: https://www.instagram.com/ghcretors/
 layout: home
 ---
+
