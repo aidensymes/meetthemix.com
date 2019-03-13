@@ -15,10 +15,30 @@ $gutter-3: $gutter*2;
 $gutter-4: $gutter*4;
 $gutter-6: $gutter*6;
 
-// columns
+// Columns
 ////////////////////////////////////////////////////////////////////////////////
 $columns: 12;
 
 @function col($cols) {
     @return calc(((99% - ((#{$columns} - 1) * #{$gutter})) / #{$columns}) * #{$cols} + ((#{$cols} - 1) * #{$gutter}));
+}
+
+// Breakpoints
+////////////////////////////////////////////////////////////////////////////////
+$breakpoints: (
+  'small': 500px,
+  'medium':  850px,
+  'large': 1100px
+) !default;
+
+@mixin break-at($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (max-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+   @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
 }

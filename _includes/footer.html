@@ -1,11 +1,11 @@
 <footer class="wrapper--outer">
   <div class="wrapper">
-    <div class="col--4 rule--light">
+    <div class="col--4 rule--light mobile--wide">
       <h2>
         Connect with us:
       <h2>
     </div>
-    <div class="footer__social col--4 rule--light">
+    <div class="footer__social col--4 rule--light mobile--wide">
       {% for link in page.footer %}
         <div>
           <a href="{{ link[1] }}" target="_blank">
@@ -14,7 +14,7 @@
         </div>
       {% endfor %}
     </div>
-    <div class="footer__logo col--4 rule--light">
+    <div class="footer__logo col--4 rule--light mobile--wide">
       {% include logo.html %}
     </div>
   </div>

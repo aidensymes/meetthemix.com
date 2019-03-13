@@ -1,5 +1,30 @@
 @import "variables";
 
+// Grid
+////////////////////////////////////////////////////////////////////////////////
+
+.col--4 {
+  @include break-at('small') {
+    width: col(6);
+  }
+}
+
+.col--8 {
+  @include break-at('small') {
+    width: col(12);
+    margin-right: 0;
+  }
+}
+
+.hero__caption {
+  @include break-at('small') {
+    width: col(12);
+    margin-right: 0;
+    margin-bottom: $gutter;
+  }
+}
+
+
 // Wrappers
 ////////////////////////////////////////////////////////////////////////////////
 .wrapper {
@@ -7,6 +32,12 @@
   max-width: 1440px;
   margin: 0 auto;
   display: block;
+  @include break-at('medium') {
+    width: 85%;
+  }
+  @include break-at('small') {
+    width: 90%;
+  }
   // Clearfix
   zoom: 1;
   &:after {
@@ -41,6 +72,9 @@
     width: 100%;
     position: absolute;
   }
+  @include break-at('small') {
+    margin-bottom: $gutter-half;
+  }
 }
 
 // Sections
@@ -48,6 +82,9 @@
 
 section {
   margin-bottom: $gutter-6;
+  @include break-at('small') {
+    margin-bottom: $gutter-4;
+  }
 }
 
 .section__song {
@@ -57,15 +94,29 @@ section {
   }
 }
 
+.section__images {
+  margin-right: 0;
+  float: right;
+}
+
 // Header
 ////////////////////////////////////////////////////////////////////////////////
 
 header {
   margin-bottom: $gutter;
+  @include break-at('small') {
+    margin-bottom: $gutter-2;
+  }
 }
 
 .header__title {
   margin-top: $gutter-3;
+}
+
+.header__gap {
+  @include break-at('small') {
+    display: none;
+  }
 }
 
 // Links
@@ -89,12 +140,20 @@ header {
 
 .links__link {
   margin-bottom: $gutter-2;
+  @include break-at('small') {
+    margin-bottom: $gutter;
+  }
 }
 
 // Footer
 ////////////////////////////////////////////////////////////////////////////////
 footer {
-    padding: $gutter-2 0 $gutter-6 0;
+  padding: $gutter-2 0 $gutter-6 0;
+  @include break-at('small') {
+    .col--4 {
+      margin-bottom: $gutter;
+    }
+  }
 }
 
 .footer__social {

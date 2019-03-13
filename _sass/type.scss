@@ -17,6 +17,15 @@ h1 {
     color: $black;
     font-weight: inherit;
   }
+  @include break-at('medium') {
+    font-size: 110px;
+    line-height: 90px;
+  }
+  @include break-at('small') {
+    font-size: 75px;
+    line-height: 60px;
+    margin-bottom: $gutter;
+  }
 }
 
 h2 {
