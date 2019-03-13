@@ -3,7 +3,7 @@
 // Wrappers
 ////////////////////////////////////////////////////////////////////////////////
 .wrapper {
-  width: 90%;
+  width: 75%;
   max-width: 1440px;
   margin: 0 auto;
   display: block;
@@ -43,15 +43,25 @@
   }
 }
 
+// Sections
+////////////////////////////////////////////////////////////////////////////////
+
 section {
-  margin-bottom: $gutter-8;
+  margin-bottom: $gutter-6;
+}
+
+.section__song {
+  margin-bottom: $gutter;
+  iframe {
+    width: 100%;
+  }
 }
 
 // Header
 ////////////////////////////////////////////////////////////////////////////////
 
 header {
-  margin-bottom: $gutter-3;
+  margin-bottom: $gutter;
 }
 
 .header__title {
@@ -66,16 +76,40 @@ header {
   height: $gutter-2;
   line-height: $gutter-2;
   border-radius: 500px;
-  color: $yellow;
   text-align: center;
   &:hover {
     background-color: $yellow;
-    color: $black;
     border: 2px solid $black;
     cursor: pointer;
+    h2 {
+      color: $black;
+    }
   }
 }
 
 .links__link {
   margin-bottom: $gutter-2;
+}
+
+// Footer
+////////////////////////////////////////////////////////////////////////////////
+footer {
+    padding: $gutter-2 0 $gutter-8 0;
+}
+
+.footer__social {
+  color: $yellow;
+  display: inline-flex;
+  div {
+    flex: auto;
+    display: inline;
+    text-align: center;
+    i {
+      font-size: 36px;
+    }
+  }
+}
+
+.footer__logo {
+  fill: $yellow;
 }

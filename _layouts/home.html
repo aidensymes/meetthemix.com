@@ -6,40 +6,67 @@
         {% include header.html %}
         {% for section in page.sections %}
           <section id="{{ section.title }}" class="col--12">
+
             <div class="col--8">
               <h1>
                 {{ section.title | markdownify | replace: '<p>', '' }}
               </h1>
-              {% if section.links %}
+            </div>
+            {% if forloop.first == true %}
+              <!-- <div class="section__song col--12">
+                {{ page.song }}
+              </div> -->
+            {% endif %}
+
+            {% if section.video %}
+              {% if forloop.first == true %}
+                <div class="col--12">
+                  <div class="wrapper--video">
+                    {{ section.video }}
+                  </div>
+                  <div class="col--4">
+                    <p>
+                      {{ section.caption }}
+                    </p>
+                  </div>
+                  <div class="section__song col--8">
+                    {{ page.song }}
+                  </div>
+                </div>
+              {% else %}
+                <div class="col--8">
+                  <div class="wrapper--video">
+                    {{ section.video }}
+                  </div>
+                  {% if section.caption %}
+                    <div class="col--6">
+                      <p>
+                        {{ section.caption }}
+                      </p>
+                    </div>
+                  {% endif %}
+                </div>
+              {% endif %}
+            {% endif %}
+
+            {% if section.links %}
+              <div class="col--8">
                 <div class="links__link button col--6">
-                  Remix the page
+                  <h2>
+                    Remix the page
+                  </h2>
                 </div>
                 {% for link in section.links %}
                   {% assign link-array = link | split: ", " %}
-                  <div class="links__link col--6 overline">
+                  <div class="links__link col--6 rule">
                     <a href="{{ link-array[1] }}" target="_blank">
                       {{ link-array[0] }}
                     </a>
                   </div>
                 {% endfor %}
-              {% endif %}
-            </div>
-            {% if section.video %}
-              {% if forloop.first == true %}
-                <div class="col--12">
-              {% else %}
-                <div class="col--8">
-              {% endif %}
-                <div class="wrapper--video">
-                  {{ section.video }}
-                </div>
-                {% if section.caption %}
-                  <div class="col--4">
-                    {{ section.caption }}
-                  </div>
-                {% endif %}
               </div>
             {% endif %}
+
             {% if section.images %}
               <div class="col--4">
                 {% for image in section.images %}
@@ -47,6 +74,7 @@
                 {% endfor %}
               </div>
             {% endif %}
+
           </section>
         {% endfor %}
       </div>
