@@ -89,6 +89,8 @@ section {
 
 .section__song {
   margin-bottom: $gutter;
+  padding: $gutter-half;
+  background-color: $black;
   iframe {
     width: 100%;
   }
