@@ -31,7 +31,7 @@ sections:
   - "/uploads/2FCB75B4-42DA-49AB-B143-428461E4A570.JPG"
 - title: Hungry for more?
   images:
-  - "/uploads/IMG_2656.jpg"
+  - "/uploads/IMG_2660.jpg"
   links:
   - More about G. H. Cretors, https://www.ghcretors.com/
   - Find a store near you, https://www.ghcretors.com/where-to-buy
