@@ -3,11 +3,7 @@ title: Home
 date: 2019-03-12 14:27:00 Z
 permalink: "/"
 song: <iframe width="100%" height="20" scrolling="no" frameborder="no" allow="autoplay"
-<<<<<<< HEAD
   src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/585373488&color=%23000000&inverse=true&auto_play=false&show_user=false"></iframe>
-=======
-  src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/585373488&color=%23000000&inverse=false&auto_play=false&show_user=false"></iframe>
->>>>>>> 44a6906f414b3704f91f17ee0ce869d1b9125285
 sections:
 - title: You're gonna like this **mix**. A lot.
   video: <iframe width="560" height="315" src="https://www.youtube.com/embed/pWmq3fEkHSo"
