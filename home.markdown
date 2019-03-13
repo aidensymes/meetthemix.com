@@ -6,7 +6,7 @@ song: <iframe width="100%" height="20" scrolling="no" frameborder="no" allow="au
   src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/585373488&color=%23ff5500&inverse=true&auto_play=false&show_user=false"></iframe>
 sections:
 - title: You're gonna like this **mix**. A lot.
-  video: <iframe width="560" height="315" src="https://www.youtube.com/embed/pWmq3fEkHSo?controls=0"
+  video: <iframe width="560" height="315" src="https://www.youtube.com/embed/pWmq3fEkHSo"
     frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
     allowfullscreen></iframe>
   caption: Fusce sollicitudin nulla ac lorem laoreet maximus. Donec rhoncus eget arcu
