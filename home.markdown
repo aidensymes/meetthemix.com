@@ -9,9 +9,8 @@ sections:
   video: <iframe width="560" height="315" src="https://www.youtube.com/embed/pWmq3fEkHSo"
     frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
     allowfullscreen></iframe>
-  caption: Fusce sollicitudin nulla ac lorem laoreet maximus. Donec rhoncus eget arcu
-    id congue. Vestibulum vitae scelerisque ex, vel pharetra ante. Nullam vulputate
-    scelerisque lectus, eget ultrices magna porttitor non.
+  caption: What do you get when you mix a GRAMMY® Award Winning Artist, sounds of
+    our popcorn, and no rules? One crazy mix.
 - title: The making of **the mix**.
   video: <iframe width="560" height="315" src="https://www.youtube.com/embed/KRKwiodn9N0"
     frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
