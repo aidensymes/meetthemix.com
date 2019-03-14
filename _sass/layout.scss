@@ -37,12 +37,12 @@
 
 // Z-index
 ////////////////////////////////////////////////////////////////////////////////
-footer, p, .section__song, .links {
+footer, p, img, .section__song, .links {
   z-index: 500;
   position: relative;
 }
 
-h1 {
+h1, .header__logo {
   z-index: -1;
   position: relative;
 }
@@ -143,29 +143,50 @@ header {
   }
 }
 
+.header__logo {
+  @include break-at('small') {
+    width: col(6);
+    margin-right: 0;
+  }
+}
+
 // Links
 ////////////////////////////////////////////////////////////////////////////////
 
 .button {
-  background-color: $black;
+  background-color: inherit;
   height: $gutter-2;
   line-height: $gutter-2;
   border-radius: 500px;
   text-align: center;
   border: 2px solid $black;
+  h2 {
+    color: $black !important;
+  }
   &:hover {
-    background-color: inherit;
-    cursor: pointer;
+    background-color: $black;
     h2 {
-      color: $black !important;
+      color: $white !important;
     }
+    cursor: pointer;
   }
 }
 
 .links__link {
   margin-bottom: $gutter-2;
+  a {
+    font-size: 22px;
+  }
   @include break-at('medium') {
+    a {
+      font-size: 18px;
+    }
     margin-bottom: $gutter;
+  }
+  @include break-at('small') {
+    a {
+      font-size: 22px;
+    }
   }
 }
 

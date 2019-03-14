@@ -36,11 +36,11 @@ function setup() {
   canvas = createCanvas(gameWidth, gameHeight);
   canvas.parent('popcorn__canvas');
   balls = [];
-  numBalls = map(gameWidth, 0, 10000, 5, 20);
+  numBalls = map(gameWidth, 0, 10000, 4, 20);
   for (var i = 0; i < numBalls; i++) {
     var x = random(gameWidth);
     var y = random(gameHeight);
-    var d = map(gameWidth, 0, 10000, 75, 250);
+    var d = map(gameWidth, 0, 10000, 75, 200);
     balls.push(new Ball(x, y, d, i, balls));
   }
   noStroke();

@@ -8,7 +8,11 @@
       {% for section in page.sections %}
         <section id="{{ section.title }}" class="col--12">
 
-          <div class="col--8">
+          {% if forloop.first == true %}
+            <div class="col--12">
+          {% else %}
+            <div class="col--8">
+          {% endif %}
             <h1>
               {{ section.title | markdownify | replace: '<p>', '' }}
             </h1>
@@ -46,8 +50,18 @@
                 {{ section.caption }}
               </p>
             </div>
-            <div class="section__song col--8">
-              {{ page.song }}
+            <div class="col--8">
+              <div class="section__song">
+                {{ page.song }}
+              </div>
+              {% for link in page.links %}
+                {% assign link-array = link | split: ", " %}
+                <p class="links__link col--4 rule mobile--wide">
+                  <a href="{{ link-array[1] }}" target="_blank">
+                    {{ link-array[0] }}
+                  </a>
+                </p>
+              {% endfor %}
             </div>
           {% else %}
             {% if section.caption %}
@@ -59,14 +73,14 @@
             {% endif %}
           {% endif %}
 
-          {% if section.links %}
+          {% if forloop.last == true %}
             <div class="col--8 links">
               <div class="links__link button col--6 mobile--wide" id="remix--button">
                 <h2>
                   Remix the page
                 </h2>
               </div>
-              {% for link in section.links %}
+              {% for link in page.links %}
                 {% assign link-array = link | split: ", " %}
                 <p class="links__link col--6 rule mobile--wide">
                   <a href="{{ link-array[1] }}" target="_blank">
@@ -75,9 +89,6 @@
                 </p>
               {% endfor %}
             </div>
-          {% endif %}
-
-          {% if forloop.last == true %}
             <div class="section__images mobile--wide col--4">
               {% for image in section.images %}
                 <img src="{{ image }}"></img>
