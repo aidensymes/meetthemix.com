@@ -121,8 +121,8 @@ function Ball(x, y, diameter, index, others) {
   }
 
   this.display = function() {
-    if (index > 10) {
-      image(images[index - 10], x - diameter / 1.8, y - diameter / 1.8, diameter * 1.2, diameter * 1.2);
+    if (index > 9) {
+      image(images[index - 9], x - diameter / 1.8, y - diameter / 1.8, diameter * 1.2, diameter * 1.2);
     } else {
       image(images[index], x - diameter / 1.8, y - diameter / 1.8, diameter * 1.2, diameter * 1.2);
     }
