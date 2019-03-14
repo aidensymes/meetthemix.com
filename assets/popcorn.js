@@ -14,7 +14,9 @@ var gameHeight;
 
 $(document).ready(function() {
   $(window).on('resize', function(e) {
-    setup();
+    if ($(window).width() > 400) {
+      setup();
+    }
   });
 });
 
