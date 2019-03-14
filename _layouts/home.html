@@ -2,91 +2,92 @@
 <html lang="en">
   {% include head.html %}
   <body>
-      <div class="wrapper">
-        {% include header.html %}
-        {% for section in page.sections %}
-          <section id="{{ section.title }}" class="col--12">
+    <div id="popcorn__canvas"></div>
+    <div class="wrapper">
+      {% include header.html %}
+      {% for section in page.sections %}
+        <section id="{{ section.title }}" class="col--12">
 
-            <div class="col--8">
-              <h1>
-                {{ section.title | markdownify | replace: '<p>', '' }}
-              </h1>
-            </div>
+          <div class="col--8">
+            <h1>
+              {{ section.title | markdownify | replace: '<p>', '' }}
+            </h1>
+          </div>
 
-            {% if section.video %}
-              {% if forloop.first == true %}
-                <div class="col--12">
-                  <div class="wrapper--video">
-                    {{ section.video }}
-                  </div>
-                </div>
-              {% else %}
-                <div class="col--8">
-                  <div class="wrapper--video">
-                    {{ section.video }}
-                  </div>
-                </div>
-              {% endif %}
-            {% endif %}
-
-            {% if section.images %}
-              {% if forloop.last == false %}
-                <div class="section__images col--4">
-                  {% for image in section.images %}
-                    <img src="{{ image }}"></img>
-                  {% endfor %}
-                </div>
-              {% endif %}
-            {% endif %}
-
+          {% if section.video %}
             {% if forloop.first == true %}
-              <div class="hero__caption col--4">
-                <p>
-                  {{ section.caption }}
-                </p>
-              </div>
-              <div class="section__song col--8">
-                {{ page.song }}
+              <div class="col--12">
+                <div class="wrapper--video">
+                  {{ section.video }}
+                </div>
               </div>
             {% else %}
-              {% if section.caption %}
-                <div class="col--4">
-                  <p>
-                    {{ section.caption }}
-                  </p>
-                </div>
-              {% endif %}
-            {% endif %}
-
-            {% if section.links %}
               <div class="col--8">
-                <div class="links__link button col--6 mobile--wide" id="remix--button">
-                  <h2>
-                    Remix the page
-                  </h2>
+                <div class="wrapper--video">
+                  {{ section.video }}
                 </div>
-                {% for link in section.links %}
-                  {% assign link-array = link | split: ", " %}
-                  <p class="links__link col--6 rule mobile--wide">
-                    <a href="{{ link-array[1] }}" target="_blank">
-                      {{ link-array[0] }}
-                    </a>
-                  </p>
-                {% endfor %}
               </div>
             {% endif %}
+          {% endif %}
 
-            {% if forloop.last == true %}
-              <div class="section__images mobile--wide col--4">
+          {% if section.images %}
+            {% if forloop.last == false %}
+              <div class="section__images col--4">
                 {% for image in section.images %}
                   <img src="{{ image }}"></img>
                 {% endfor %}
               </div>
             {% endif %}
+          {% endif %}
 
-          </section>
-        {% endfor %}
-      </div>
-      {% include footer.html %}
+          {% if forloop.first == true %}
+            <div class="hero__caption col--4">
+              <p>
+                {{ section.caption }}
+              </p>
+            </div>
+            <div class="section__song col--8">
+              {{ page.song }}
+            </div>
+          {% else %}
+            {% if section.caption %}
+              <div class="col--4">
+                <p>
+                  {{ section.caption }}
+                </p>
+              </div>
+            {% endif %}
+          {% endif %}
+
+          {% if section.links %}
+            <div class="col--8 links">
+              <div class="links__link button col--6 mobile--wide" id="remix--button">
+                <h2>
+                  Remix the page
+                </h2>
+              </div>
+              {% for link in section.links %}
+                {% assign link-array = link | split: ", " %}
+                <p class="links__link col--6 rule mobile--wide">
+                  <a href="{{ link-array[1] }}" target="_blank">
+                    {{ link-array[0] }}
+                  </a>
+                </p>
+              {% endfor %}
+            </div>
+          {% endif %}
+
+          {% if forloop.last == true %}
+            <div class="section__images mobile--wide col--4">
+              {% for image in section.images %}
+                <img src="{{ image }}"></img>
+              {% endfor %}
+            </div>
+          {% endif %}
+
+        </section>
+      {% endfor %}
+    </div>
+    {% include footer.html %}
   </body>
 </html>

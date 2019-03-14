@@ -13,9 +13,10 @@ $(document).ready(function() {
     }
     current = ranNum;
     var newColor = colors[ranNum];
-    $('html, body').css('background-color', newColor);
+    $('html').css('background-color', newColor);
     $('.rule--light').css('border-color', newColor);
     $('.footer__social, h2, h1').css('color', newColor);
     $('.footer__logo').css('fill', newColor);
+    setup();
   });
 });
