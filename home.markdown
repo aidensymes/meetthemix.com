@@ -15,8 +15,8 @@ sections:
   video: <iframe width="560" height="315" src="https://www.youtube.com/embed/KRKwiodn9N0"
     frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
     allowfullscreen></iframe>
-  caption: Fusce pellentesque tincidunt libero vitae aliquet. Donec condimentum nisi
-    et purus bibendum vehicula. Nam mollis eleifend tristique.
+  caption: 'Check out this behind the scenes studio session with Sir Mix-A-Lot X G.H.
+    Cretors. '
   images:
   - "/uploads/IMG_2697.jpg"
   - "/uploads/IMG_2402.jpg"
