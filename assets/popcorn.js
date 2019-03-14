@@ -28,7 +28,11 @@ function preload() {
 
 function setup() {
   gameWidth = $(window).width();
-  gameHeight = $(window).height();
+  if ($(window).width() > 400) {
+    gameHeight = $(window).height();
+  } else {
+    gameHeight = $(window).height() + 100;
+  }
   canvas = createCanvas(gameWidth, gameHeight);
   canvas.parent('popcorn__canvas');
   balls = [];
