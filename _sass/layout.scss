@@ -37,12 +37,12 @@
 
 // Z-index
 ////////////////////////////////////////////////////////////////////////////////
-footer, p, img, .section__song, .links {
+footer, p, img, .section__song, .links, .header__logo {
   z-index: 500;
   position: relative;
 }
 
-h1, .header__logo {
+h1 {
   z-index: -1;
   position: relative;
 }
