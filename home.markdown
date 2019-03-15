@@ -14,13 +14,13 @@ sections:
     frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
     allowfullscreen></iframe>
   caption: What do you get when you mix a GRAMMY® Award Winning Artist, sounds of
-    our popcorn, and no rules? One crazy mix.
+    G.H. Cretors popcorn, and no rules? One crazy mix.
 - title: The making of **the mix**.
   video: <iframe width="560" height="315" src="https://www.youtube.com/embed/KRKwiodn9N0"
     frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
     allowfullscreen></iframe>
-  caption: 'Check out this behind the scenes studio session with Sir Mix-A-Lot X G.H.
-    Cretors. '
+  caption: 'Check out this exclusive behind-the-scenes studio session with Sir Mix-A-Lot
+    X G.H. Cretors. '
   images:
   - "/uploads/IMG_2697.jpg"
   - "/uploads/IMG_2402.jpg"
@@ -28,8 +28,8 @@ sections:
   video: <iframe width="560" height="315" src="https://www.youtube.com/embed/RDTre8s3AH0"
     frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
     allowfullscreen></iframe>
-  caption: "#MEETTHEMIX event launch party with Sir Mix-A-Lot at The Chinese Theatre
-    in Los Angeles, California. "
+  caption: 'You’re invited to the #MEETTHEMIX event launch party with Sir Mix-A-Lot
+    at The Chinese Theatre in Los Angeles, California. '
   images:
   - "/uploads/2FCB75B4-42DA-49AB-B143-428461E4A570.JPG"
 - title: Hungry for more?
