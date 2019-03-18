@@ -213,7 +213,7 @@ header {
     width: col(6);
     margin-top: 0;
     &:nth-child(odd) {
-      margin-right: $gutter-half;
+      margin-right: $gutter;
     }
     &:nth-child(3) {
       margin-top: $gutter-half;
