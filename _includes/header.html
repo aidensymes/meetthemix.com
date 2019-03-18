@@ -1,14 +1,23 @@
 <header>
-  <div class="header__title col--4 rule">
-    <p>
-      G. H. Cretors <br>
-      Sir Mix-A-Lot
-    </p>
-  </div>
-  <div class="header__gap col--6">
-  </div>
   <div class="header__logo col--2">
     <img src="{{ site.baseurl }}/assets/ghCretorsLogoBox.svg">
     </img>
+  </div>
+  <div class="header__title col--2 rule">
+    <h2>
+      Sir <br>
+      Mix-A-Lot
+    </h2>
+  </div>
+  <div class="header__links col--8">
+    <div class="header__link col--3 button remix">
+      Remix the page
+    </div>
+    {% for link in page.links %}
+      {% assign link-array = link | split: ", " %}
+      <a class="header__link col--3 button" href="{{ link-array[1] }}" target="_blank">
+        {{ link-array[0] }}
+      </a>
+    {% endfor %}
   </div>
 </header>

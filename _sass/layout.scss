@@ -37,7 +37,7 @@
 
 // Z-index
 ////////////////////////////////////////////////////////////////////////////////
-footer, p, img, .section__song, .links, .header__logo {
+footer, p, img, .section__song, .button, .header__logo, .header__title {
   z-index: 500;
   position: relative;
 }
@@ -104,6 +104,9 @@ h1 {
 
 section {
   margin-bottom: $gutter-6;
+  &.hero {
+    margin-bottom: $gutter-4;
+  }
   @include break-at('medium') {
     margin-bottom: $gutter-4;
   }
@@ -123,6 +126,15 @@ section {
   float: right;
 }
 
+.section__caption {
+  @include break-at('medium') {
+    width: col(8);
+  }
+  @include break-at('small') {
+    width: col(6);
+  }
+}
+
 // Header
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -134,19 +146,81 @@ header {
 }
 
 .header__title {
-  margin-top: $gutter-3;
-}
-
-.header__gap {
+  margin-top: $gutter;
+  @include break-at('large') {
+    h2 {
+      font-size: 15px;
+      line-height: 12px
+    }
+  }
+  @include break-at('medium') {
+    width: col(4);
+    margin-right: 0;
+    h2 {
+      font-size: 18px;
+      line-height: 15px;
+    }
+  }
   @include break-at('small') {
-    display: none;
+    width: col(6);
   }
 }
 
 .header__logo {
+  @include break-at('medium') {
+    width: col(4);
+  }
   @include break-at('small') {
     width: col(6);
+  }
+}
+
+.header__links {
+  margin: $gutter 0 0 0;
+  @include break-at('medium') {
+    width: col(4);
     margin-right: 0;
+  }
+  @include break-at('small') {
+    width: 100%;
+  }
+}
+
+.header__link {
+  height: $gutter + $gutter-half;
+  line-height: 40px;
+  font-size: 12px;
+  @include break-at('large') {
+    width: col(6);
+    &:nth-child(even) {
+      margin-right: 0;
+    }
+    &:nth-child(3) {
+      margin-top: $gutter-half;
+    }
+    &:nth-child(4) {
+      margin-top: $gutter-half;
+    }
+  }
+  @include break-at('medium') {
+    width: 100%;
+    margin: $gutter-half 0 0 0;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  @include break-at('small') {
+    width: col(6);
+    margin-top: 0;
+    &:nth-child(odd) {
+      margin-right: $gutter-half;
+    }
+    &:nth-child(3) {
+      margin-top: $gutter-half;
+    }
+    &:nth-child(4) {
+      margin-top: $gutter-half;
+    }
   }
 }
 
@@ -155,37 +229,44 @@ header {
 
 .button {
   background-color: inherit;
-  height: $gutter-2;
-  line-height: $gutter-2;
   border-radius: 500px;
   text-align: center;
   border: 2px solid $black;
-  h2 {
-    color: $black !important;
-  }
+  color: $black;
+  font-weight: 500;
   &:hover {
+    color: $white;
     background-color: $black;
-    h2 {
-      color: $white !important;
-    }
     cursor: pointer;
   }
 }
 
-.links__link {
-  margin-bottom: $gutter-2;
-  a {
-    font-size: 22px;
+.remix {
+  background-color: $black;
+  color: $blue;
+  text-transform: uppercase;
+  font-weight: 700;
+  &:hover {
+    background-color: inherit;
+    color: $black !important;
   }
+}
+
+.links__link {
+  margin-bottom: $gutter;
+  height: $gutter-2;
+  line-height: 55px;
+  font-size: 18px;
   @include break-at('medium') {
-    a {
-      font-size: 18px;
-    }
+    font-size: 15px;
     margin-bottom: $gutter;
   }
   @include break-at('small') {
-    a {
-      font-size: 22px;
+    font-size: 18px;
+    width: 100%;
+    margin: 0 0 $gutter-half 0;
+    &:nth-child(4) {
+      margin-bottom: $gutter-2;
     }
   }
 }
@@ -205,6 +286,7 @@ footer {
 .footer__social {
   color: $blue;
   display: inline-flex;
+  margin-bottom: $gutter-2 !important;
   div {
     flex: auto;
     display: inline;
@@ -219,6 +301,7 @@ footer {
 }
 
 #footer__caption {
+  color: $blue;
   @include break-at('small') {
     display: none;
   }

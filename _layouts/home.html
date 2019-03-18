@@ -6,17 +6,19 @@
     <div class="wrapper">
       {% include header.html %}
       {% for section in page.sections %}
-        <section id="{{ section.title }}" class="col--12">
+        {% if forloop.first == true %}
+        <section class="hero col--12">
+        {% else %}
+        <section class="col--12">
+        {% endif %}
 
-          {% if forloop.first == true %}
+          {% if forloop.first == false %}
             <div class="col--12">
-          {% else %}
-            <div class="col--8">
+              <h1>
+                {{ section.title | markdownify | replace: '<p>', '' }}
+              </h1>
+            </div>
           {% endif %}
-            <h1>
-              {{ section.title | markdownify | replace: '<p>', '' }}
-            </h1>
-          </div>
 
           {% if section.video %}
             {% if forloop.first == true %}
@@ -45,27 +47,24 @@
           {% endif %}
 
           {% if forloop.first == true %}
-            <div class="hero__caption col--4">
-              <p>
-                {{ section.caption }}
-              </p>
-            </div>
             <div class="col--8">
+              <h1>
+                {{ section.title | markdownify | replace: '<p>', '' }}
+              </h1>
+            </div>
+            <div class="hero__caption col--4">
               <div class="section__song">
                 {{ page.song }}
               </div>
-              {% for link in page.links %}
-                {% assign link-array = link | split: ", " %}
-                <p class="links__link col--4 rule mobile--wide">
-                  <a href="{{ link-array[1] }}" target="_blank">
-                    {{ link-array[0] }}
-                  </a>
+              <div>
+                <p>
+                  {{ section.caption }}
                 </p>
-              {% endfor %}
+              </div>
             </div>
           {% else %}
             {% if section.caption %}
-              <div class="col--4">
+              <div class="section__caption col--4">
                 <p>
                   {{ section.caption }}
                 </p>
@@ -75,18 +74,14 @@
 
           {% if forloop.last == true %}
             <div class="col--8 links">
-              <div class="links__link button col--6 mobile--wide" id="remix--button">
-                <h2>
-                  Remix the page
-                </h2>
+              <div class="links__link col--6 remix button">
+                Remix the page
               </div>
               {% for link in page.links %}
                 {% assign link-array = link | split: ", " %}
-                <p class="links__link col--6 rule mobile--wide">
-                  <a href="{{ link-array[1] }}" target="_blank">
-                    {{ link-array[0] }}
-                  </a>
-                </p>
+                <a class="links__link col--6 button" href="{{ link-array[1] }}" target="_blank">
+                  {{ link-array[0] }}
+                </a>
               {% endfor %}
             </div>
             <div class="section__images mobile--wide col--4">

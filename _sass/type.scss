@@ -17,9 +17,13 @@ h1 {
     color: $black;
     font-weight: inherit;
   }
+  @include break-at('large') {
+    font-size: 130px;
+    line-height: 110px;
+  }
   @include break-at('medium') {
-    font-size: 110px;
-    line-height: 90px;
+    font-size: 85px;
+    line-height: 75px;
   }
   @include break-at('small') {
     font-size: 75px;
@@ -30,8 +34,8 @@ h1 {
 
 h2 {
   font-size: 18px;
+  line-height: 15px;
   font-weight: 700;
-  color: $blue;
   text-transform: uppercase;
 }
 
@@ -41,12 +45,9 @@ p {
 }
 
 a {
-  text-decoration: underline;
+  text-decoration: none;
   color: inherit;
   &visited {
     color: inherit;
-  }
-  &:hover {
-    text-decoration: none;
   }
 }

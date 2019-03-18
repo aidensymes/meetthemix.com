@@ -31,7 +31,7 @@ img {
 // Styling
 ////////////////////////////////////////////////////////////////////////////////
 .rule {
-  padding-top: $gutter;
+  padding-top: $gutter-half;
   border-top: 2px solid $black;
   @include break-at('small') {
     padding-top: $gutter-half;
@@ -41,9 +41,6 @@ img {
 .rule--light {
   padding-top: $gutter;
   border-top: 2px solid $blue;
-  @include break-at('small') {
-    padding-top: $gutter-half;
-  }
 }
 
 ::selection {
