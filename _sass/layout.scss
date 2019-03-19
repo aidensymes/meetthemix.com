@@ -127,6 +127,9 @@ section {
 }
 
 .section__caption {
+  strong {
+    font-weight: 700;
+  }
   @include break-at('medium') {
     width: col(8);
   }
