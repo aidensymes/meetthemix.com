@@ -19,8 +19,8 @@ sections:
   video: <iframe width="560" height="315" src="https://www.youtube.com/embed/KRKwiodn9N0"
     frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
     allowfullscreen></iframe>
-  caption: 'Check out this exclusive behind-the-scenes studio session with Sir Mix-A-Lot
-    X G.H. Cretors. '
+  caption: 'Check out this exclusive behind-the-scenes studio session with **Sir Mix-A-Lot
+    X G.H. Cretors**. '
   images:
   - "/uploads/IMG_2697.jpg"
   - "/uploads/IMG_2402.jpg"
