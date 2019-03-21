@@ -79,7 +79,13 @@
               </div>
               {% for link in page.links %}
                 {% assign link-array = link | split: ", " %}
-                <a class="links__link col--6 button" href="{{ link-array[1] }}" target="_blank">
+                {% if forloop.index == 1 %}
+                  <a class="links__link col--6 button" href="{{ link-array[1] }}" onclick="fbq('track', 'Lead');console.log('lead')" target="_blank">
+                {% elsif forloop.index == 2 %}
+                  <a class="links__link col--6 button" href="{{ link-array[1] }}" onclick="fbq('track', 'FindLocation');console.log('FindLocation')" target="_blank">
+                {% else %}
+                  <a class="links__link col--6 button" href="{{ link-array[1] }}" target="_blank">
+                {% endif %}
                   {{ link-array[0] }}
                 </a>
               {% endfor %}
