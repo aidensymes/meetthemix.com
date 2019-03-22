@@ -16,11 +16,11 @@
     {% for link in page.links %}
       {% assign link-array = link | split: ", " %}
       {% if forloop.index == 1 %}
-        <a class="header__link col--3 button" href="{{ link-array[1] }}" onclick="fbq('track', 'Lead');" target="_blank">
+        <a class="header__link col--3 button" href="{{ link-array[1] }}" onclick="fbq('track', 'Lead');gtag('event', 'conversion', {'send_to': 'AW-769001105/qtK7CLTq4ZYBEJGN2O4C'});" target="_blank">
       {% elsif forloop.index == 2 %}
         <a class="header__link col--3 button" href="{{ link-array[1] }}" onclick="fbq('track', 'FindLocation');gtag('event', 'conversion', {'send_to': 'AW-769001105/XlKqCM3q7ZYBEJGN2O4C'});" target="_blank">
       {% elsif forloop.index == 3 %}
-        <a class="header__link col--3 button" href="{{ link-array[1] }}" onclick="fbq('track', 'FindLocation');gtag('event', 'conversion', {'send_to': 'AW-769001105/ia-QCPnp7ZYBEJGN2O4C'});" target="_blank">
+        <a class="header__link col--3 button" href="{{ link-array[1] }}" onclick="gtag('event', 'conversion', {'send_to': 'AW-769001105/ia-QCPnp7ZYBEJGN2O4C'});" target="_blank">
       {% else %}
         <a class="header__link col--3 button" href="{{ link-array[1] }}" target="_blank">
       {% endif %}
