@@ -22,8 +22,8 @@ sections:
   caption: 'Check out this exclusive behind-the-scenes studio session with **Sir Mix-A-Lot
     X G.H. Cretors**. '
   images:
-  - "/uploads/IMG_2697.jpg"
-  - "/uploads/IMG_2402.jpg"
+  - "/uploads/IMG_2697-78b3e6.jpg"
+  - "/uploads/IMG_2402-b98083.jpg"
 - title: Meet **the mix**.
   video: <iframe width="560" height="315" src="https://www.youtube.com/embed/RDTre8s3AH0"
     frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
@@ -34,7 +34,7 @@ sections:
   - "/uploads/2FCB75B4-42DA-49AB-B143-428461E4A570.JPG"
 - title: Hungry for more?
   images:
-  - "/uploads/IMG_2660.jpg"
+  - "/uploads/IMG_2660-c806ac.jpg"
 footer:
   facebook: https://www.facebook.com/GHCretors
   twitter: https://twitter.com/GHCretors
