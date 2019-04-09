@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+  <body>
+    <div id="popcorn__canvas"></div>
+    <div class="wrapper">
+      {% include header.html %}
+      {% for section in page.sections %}
+        {% if forloop.first == true %}
+        <section class="hero col--12">
+        {% else %}
+        <section class="col--12">
+        {% endif %}
+
+          {% if forloop.first == false %}
+            <div class="col--12">
+              <h1>
+                {{ section.title | markdownify | replace: '<p>', '' }}
+              </h1>
+            </div>
+          {% endif %}
+
+          {% if section.video %}
+            {% if forloop.first == true %}
+              <div class="col--12">
+                <div class="wrapper--video">
+                  {{ section.video }}
+                </div>
+              </div>
+            {% else %}
+              <div class="col--8">
+                <div class="wrapper--video">
+                  {{ section.video }}
+                </div>
+              </div>
+            {% endif %}
+          {% endif %}
+
+          {% if section.images %}
+            {% if forloop.last == false %}
+              <div class="section__images col--4">
+                {% for image in section.images %}
+                  <img src="{{ image }}"></img>
+                {% endfor %}
+              </div>
+            {% endif %}
+          {% endif %}
+
+          {% if forloop.first == true %}
+            <div class="col--8">
+              <h1>
+                {{ section.title | markdownify | replace: '<p>', '' }}
+              </h1>
+            </div>
+            <div class="hero__caption col--4">
+              <div class="section__song">
+                {{ page.song }}
+              </div>
+              <div>
+                <p>
+                  {{ section.caption | markdownify | replace: '<p>', '' }}
+                </p>
+              </div>
+            </div>
+          {% else %}
+            {% if section.caption %}
+              <div class="section__caption col--4">
+                <p>
+                  {{ section.caption | markdownify | replace: '<p>', '' }}
+                </p>
+              </div>
+            {% endif %}
+          {% endif %}
+
+          {% if forloop.last == true %}
+            <div class="col--8 links">
+              <div class="links__link col--6 remix button">
+                Remix the page
+              </div>
+              {% for link in page.links %}
+                {% assign link-array = link | split: ", " %}
+                {% if forloop.index == 1 %}
+                  <a class="links__link col--6 button" href="{{ link-array[1] }}" onclick="fbq('track', 'Lead');gtag('event', 'conversion', {'send_to': 'AW-769001105/qtK7CLTq4ZYBEJGN2O4C'});" target="_blank">
+                {% elsif forloop.index == 2 %}
+                  <a class="links__link col--6 button" href="{{ link-array[1] }}" onclick="fbq('track', 'FindLocation');gtag('event', 'conversion', {'send_to': 'AW-769001105/XlKqCM3q7ZYBEJGN2O4C'});" target="_blank">
+                {% elsif forloop.index == 3 %}
+                  <a class="links__link col--6 button" href="{{ link-array[1] }}" onclick="gtag('event', 'conversion', {'send_to': 'AW-769001105/ia-QCPnp7ZYBEJGN2O4C'});" target="_blank">
+                {% else %}
+                  <a class="links__link col--6 button" href="{{ link-array[1] }}" target="_blank">
+                {% endif %}
+                  {{ link-array[0] }}
+                </a>
+              {% endfor %}
+            </div>
+            <div class="section__images mobile--wide col--4">
+              {% for image in section.images %}
+                <img src="{{ image }}"></img>
+              {% endfor %}
+            </div>
+          {% endif %}
+
+        </section>
+      {% endfor %}
+    </div>
+    {% include footer.html %}
+  </body>
+</html>

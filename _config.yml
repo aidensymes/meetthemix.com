@@ -1,0 +1,11 @@
+---
+title: Meet The Mix
+timezone: UTC
+collections:
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true
+tagline: G. H. Cretors x Sir Mix-A-Lot

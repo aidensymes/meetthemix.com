@@ -1,0 +1,45 @@
+// Colors
+////////////////////////////////////////////////////////////////////////////////
+$black: #000000;
+$blue: #4F91CD;
+$orange: #FF8400;
+$yellow: #FFCB02;
+$white: #FFFFFF;
+
+// Units
+////////////////////////////////////////////////////////////////////////////////
+$gutter: 30px;
+$gutter-half: $gutter / 2;
+$gutter-2: $gutter*2;
+$gutter-3: $gutter*2;
+$gutter-4: $gutter*4;
+$gutter-6: $gutter*6;
+
+// Columns
+////////////////////////////////////////////////////////////////////////////////
+$columns: 12;
+$col-width: calc((100% - ((#{$columns} - 1) * #{$gutter})) / #{$columns});
+
+@function col($cols) {
+    @return calc(#{$col-width} * #{$cols} + ((#{$cols} - 1) * #{$gutter}) - 3px);
+}
+
+// Breakpoints
+////////////////////////////////////////////////////////////////////////////////
+$breakpoints: (
+  'small': 500px,
+  'medium':  850px,
+  'large': 1100px
+) !default;
+
+@mixin break-at($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (max-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+   @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}

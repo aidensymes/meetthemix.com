@@ -1,0 +1,31 @@
+<header>
+  <div class="header__logo col--2">
+    <img src="{{ site.baseurl }}/assets/ghCretorsLogoBox.svg">
+    </img>
+  </div>
+  <div class="header__title col--2 rule">
+    <h2>
+      Sir <br>
+      Mix-A-Lot
+    </h2>
+  </div>
+  <div class="header__links col--8">
+    <div class="header__link col--3 button remix">
+      Remix the page
+    </div>
+    {% for link in page.links %}
+      {% assign link-array = link | split: ", " %}
+      {% if forloop.index == 1 %}
+        <a class="header__link col--3 button" href="{{ link-array[1] }}" onclick="fbq('track', 'Lead');gtag('event', 'conversion', {'send_to': 'AW-769001105/qtK7CLTq4ZYBEJGN2O4C'});" target="_blank">
+      {% elsif forloop.index == 2 %}
+        <a class="header__link col--3 button" href="{{ link-array[1] }}" onclick="fbq('track', 'FindLocation');gtag('event', 'conversion', {'send_to': 'AW-769001105/XlKqCM3q7ZYBEJGN2O4C'});" target="_blank">
+      {% elsif forloop.index == 3 %}
+        <a class="header__link col--3 button" href="{{ link-array[1] }}" onclick="gtag('event', 'conversion', {'send_to': 'AW-769001105/ia-QCPnp7ZYBEJGN2O4C'});" target="_blank">
+      {% else %}
+        <a class="header__link col--3 button" href="{{ link-array[1] }}" target="_blank">
+      {% endif %}
+        {{ link-array[0] }}
+      </a>
+    {% endfor %}
+  </div>
+</header>
