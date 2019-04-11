@@ -163,8 +163,8 @@ section {
   position: absolute;
   padding: $gutter $gutter 0 $gutter;
   background-color: $white;
-  width: 50%;
-  margin-left: 25%;
+  width: 60%;
+  margin-left: 20%;
   margin-top: $gutter-4;
   border-radius: 10px;
   .button {
@@ -183,14 +183,15 @@ section {
     -webkit-text-stroke-color: $black;
   }
   @include break-at('large') {
-    width: 60%;
-    margin-left: 20%;
+    .popup__coupon--code {
+      font-size: 55px;
+    }
   }
   @include break-at('medium') {
-    width: 70%;
-    margin-left: 15%;
+    width: 80%;
+    margin-left: 10%;
     .popup__coupon--code {
-      font-size: 60px;
+      font-size: 45px;
     }
   }
   @include break-at('small') {
