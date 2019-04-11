@@ -169,10 +169,14 @@ section {
   border-radius: 10px;
   .button {
     display: block;
+    margin-top: $gutter;
+  }
+  .popup__label {
+    margin-bottom: $gutter;
   }
   .popup__coupon--code {
-    margin: $gutter 0;
     font-size: 75px;
+    line-height: normal;
     letter-spacing: 2px;
     color: $white;
     -webkit-text-stroke-width: 2px;
