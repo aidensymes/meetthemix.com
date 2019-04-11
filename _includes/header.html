@@ -20,7 +20,7 @@
       {% elsif forloop.index == 2 %}
         <a class="header__link col--3 button" href="{{ link-array[1] }}" onclick="fbq('track', 'FindLocation');gtag('event', 'conversion', {'send_to': 'AW-769001105/XlKqCM3q7ZYBEJGN2O4C'});" target="_blank">
       {% elsif forloop.index == 3 %}
-        <a class="header__link col--3 button" href="{{ link-array[1] }}" onclick="gtag('event', 'conversion', {'send_to': 'AW-769001105/ia-QCPnp7ZYBEJGN2O4C'});" target="_blank">
+        <a class="header__link col--3 button" onclick="$('.popup').css('display', 'block');">
       {% else %}
         <a class="header__link col--3 button" href="{{ link-array[1] }}" target="_blank">
       {% endif %}

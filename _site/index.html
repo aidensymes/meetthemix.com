@@ -5,7 +5,7 @@
 
   <!-- Title -->
   <title>
-    Meet The Mix &#124; G. H. Cretors x Sir Mix-A-Lot
+    Meet The Mix Staging &#124; G. H. Cretors x Sir Mix-A-Lot
   </title>
 
   <!-- Fonts -->
@@ -87,6 +87,23 @@
 </head>
 
   <body>
+    <section class="popup">
+  <div class="popup__overlay" onclick="$('.popup').css('display', 'none');">
+  </div>
+  <div class="popup__card">
+    <h2>
+      Save 15% on Amazon with coupon code:
+    </h2>
+    <h2 class="popup__coupon--code">
+      15THEMIX2019
+    </h2>
+    
+    <a class="links__link button" href="https://www.amazon.com/stores/page/C842DF10-2B97-477F-8680-5086D60095D2" onclick="gtag('event', 'conversion', {'send_to': 'AW-769001105/ia-QCPnp7ZYBEJGN2O4C'});" target="_blank">
+      Buy G. H. Cretors on Amazon
+    </a>
+  </div>
+</section>
+
     <div id="popcorn__canvas"></div>
     <div class="wrapper">
       <header>
@@ -121,9 +138,9 @@
     
       
       
-        <a class="header__link col--3 button" href="https://www.amazon.com/stores/page/C842DF10-2B97-477F-8680-5086D60095D2" onclick="gtag('event', 'conversion', {'send_to': 'AW-769001105/ia-QCPnp7ZYBEJGN2O4C'});" target="_blank">
+        <a class="header__link col--3 button" onclick="$('.popup').css('display', 'block');">
       
-        Buy on Amazon
+        Save on Amazon
       </a>
     
   </div>
@@ -315,9 +332,9 @@
               
                 
                 
-                  <a class="links__link col--6 button" href="https://www.amazon.com/stores/page/C842DF10-2B97-477F-8680-5086D60095D2" onclick="gtag('event', 'conversion', {'send_to': 'AW-769001105/ia-QCPnp7ZYBEJGN2O4C'});" target="_blank">
+                  <a class="links__link col--6 button" onclick="$('.popup').css('display', 'block');">
                 
-                  Buy on Amazon
+                  Save on Amazon
                 </a>
               
             </div>
