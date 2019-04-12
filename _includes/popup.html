@@ -1,0 +1,16 @@
+<section class="popup">
+  <div class="popup__overlay" onclick="$('.popup').css('display', 'none');">
+  </div>
+  <div class="popup__card">
+    <h2 class="popip__label">
+      {{ page.popup.label }}
+    </h2>
+    <h2 class="popup__coupon--code">
+      {{ page.popup.code }}
+    </h2>
+    {% assign link-array = page.popup.button | split: ", " %}
+    <a class="links__link button" href="{{ link-array[1] }}" onclick="gtag('event', 'conversion', {'send_to': 'AW-769001105/ia-QCPnp7ZYBEJGN2O4C'});" target="_blank">
+      {{ link-array[0] }}
+    </a>
+  </div>
+</section>
