@@ -43,14 +43,6 @@ img {
   border-top: 2px solid $blue;
 }
 
-::selection {
-  background: $white; /* WebKit/Blink Browsers */
-}
-::-moz-selection {
-  background: $white; /* Gecko Browsers */
-}
-
-
 // columns
 ////////////////////////////////////////////////////////////////////////////////
 $i: 1;

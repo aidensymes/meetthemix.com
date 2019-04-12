@@ -7,7 +7,11 @@ song: <iframe width="100%" height="20" scrolling="no" frameborder="no" allow="au
 links:
 - About G. H. Cretors, https://www.ghcretors.com/
 - Stores near you, https://www.ghcretors.com/where-to-buy
-- Buy on Amazon, https://www.amazon.com/stores/page/C842DF10-2B97-477F-8680-5086D60095D2
+- Save on Amazon
+popup:
+  label: 'Save 15% on Amazon with coupon code:'
+  code: 15THEMIX2019
+  button: Buy G. H. Cretors on Amazon, https://www.amazon.com/gp/mpc/A1G4E4K72EKIAY
 sections:
 - title: You're gonna like this **mix**. A lot.
   video: <iframe width="560" height="315" src="https://www.youtube.com/embed/pWmq3fEkHSo"
@@ -42,4 +46,3 @@ footer:
   instagram: https://www.instagram.com/ghcretors/
 layout: home
 ---
-
