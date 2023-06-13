@@ -41,7 +41,7 @@
             {% if forloop.last == false %}
               <div class="section__images col--4">
                 {% for image in section.images %}
-                  <img src="{{ image }}"></img>
+                  <img src="{{ site.baseurl }}/{{ image |  }}"></img>
                 {% endfor %}
               </div>
             {% endif %}
@@ -95,7 +95,7 @@
             </div>
             <div class="section__images mobile--wide col--4">
               {% for image in section.images %}
-                <img src="{{ image }}"></img>
+                <img src="{{ site.baseurl }}/{{ image }}"></img>
               {% endfor %}
             </div>
           {% endif %}
