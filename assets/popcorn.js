@@ -22,7 +22,7 @@ $(document).ready(function() {
 
 function preload() {
   for(var i = 0; i < 10; i++){
-    images[i] = loadImage('/assets/popcorn' + i + '.png');
+    images[i] = loadImage(window.location+'/assets/popcorn' + i + '.png');
   }
 }
 
