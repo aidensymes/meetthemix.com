@@ -1,3 +1,3 @@
 source 'http://rubygems.org'
-ruby "2.3.3"
+ruby "3.2.0"
 gem 'jekyll'
